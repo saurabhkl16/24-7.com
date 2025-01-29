@@ -1,0 +1,57 @@
+.conatiner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Header {
+  height: 10%;
+}
+
+.website-section {
+  height: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  // row-gap: 10px;
+  // column-gap: 10px;
+
+  .homepage-card {
+    padding: 10px;
+    // border: 1px solid black;
+    height: 250px;
+    max-height: 250px;
+  }
+
+  .homepage-card-image {
+    min-height: 200px;
+    max-width: 200px;
+    text-align: center;
+  }
+
+  .homepage-card-image:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+}
+.footer {
+  height: 30%;
+}
+
+.marquee-container {
+  overflow: hidden; /* Hide overflow to prevent scrollbars */
+  white-space: nowrap; /* Ensure the content stays in a single line */
+}
+
+.marquee {
+  display: inline-block;
+  animation: marquee 25s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%); /* Start off the right side */
+  }
+  100% {
+    transform: translateX(-100%); /* Move completely off the left side */
+  }
+}

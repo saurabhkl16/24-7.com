@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title": "Smartphone X200",
+    "image_url": "https://images.hindustantimes.com/tech/img/2024/07/01/960x540/Vivo_X200_Vivo_X200_Pro_to_feature_new_screens_and_1719821695286_1719821695509.jpg",
+    "price": "12999",
+    "brand": "Samsung"
+  },
+  {
+    "id": 2,
+    "title": "Laptop Pro 15",
+    "image_url": "https://p1-ofp.static.pub/medias/26143160351_X1CARBONG12_202310240947421728989796327.png",
+    "price": "56000",
+    "brand": "Apple"
+  },
+  {
+    "id": 3,
+    "title": "8GB DDR4 RAM",
+    "image_url": "https://th.bing.com/th/id/OIP.UFOMMm0EfJZzqXZeqPLshQAAAA?rs=1&pid=ImgDetMain",
+    "price": "1200",
+    "brand": "Crucial"
+  },
+  {
+    "id": 4,
+    "title": "500GB SSD",
+    "image_url": "https://th.bing.com/th/id/OIP.maiYyc_lrXQumX40qSsd7wAAAA?rs=1&pid=ImgDetMain",
+    "price": "3900",
+    "brand": "Crucial"
+  },
+  {
+    "id": 5,
+    "title": "Travel Backpack",
+    "image_url": "https://images-na.ssl-images-amazon.com/images/I/A1XOKtzkeuL.jpg",
+    "price": "500",
+    "brand": "Puma"
+  },
+  {
+    "id": 6,
+    "title": "Wireless Mouse",
+    "image_url": "https://th.bing.com/th/id/OIP.aFcM78YhSNU239mtt1U_SgHaHa?rs=1&pid=ImgDetMain",
+    "price": "300",
+    "brand": "Lenevo"
+  },
+  {
+    "id": 7,
+    "title": "Bluetooth Headphones",
+    "image_url": "https://th.bing.com/th/id/OIP.G0-e2il6b6LH4Zt0X_hehgHaFj?w=1890&h=1417&rs=1&pid=ImgDetMain",
+    "price": "999",
+    "brand": "Boat"
+  },
+  {
+    "id": 8,
+    "title": "Gaming Laptop G5",
+    "image_url": "https://www.wepc.com/wp-content/uploads/2023/03/MSI-Cyborg.jpg",
+    "price": "49999",
+    "brand": "Asus Tuf"
+  }
+]

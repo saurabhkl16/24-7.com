@@ -1,0 +1,48 @@
+.login-form {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  z-index: -1; /* Ensure it stays in the background */
+
+  form {
+    margin: auto;
+    width: 50vw; /* Use viewport width to make it responsive */
+    height: 50vw; /* Ensure height matches width for square dimensions */
+    max-width: 400px; /* Optional: Limit the maximum size */
+    max-height: 400px; /* Optional: Limit the maximum size */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .eye-icon:hover {
+    cursor: pointer;
+  }
+
+  .login-links {
+    button {
+      text-decoration: none;
+    }
+
+    button:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

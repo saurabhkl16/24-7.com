@@ -1,0 +1,27 @@
+html, body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full height of viewport */
+}
+
+app-header {
+  flex: 0 0 auto; /* Header stays at top */
+}
+
+.content {
+  flex: 1 0 auto; /* Ensures content takes available space */
+  display: flex;
+  justify-content: center;
+  // align-items: center; /* Centers content */
+}
+
+app-footer {
+  flex: 0 0 auto; /* Footer sticks to bottom */
+}

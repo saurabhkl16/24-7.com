@@ -1,0 +1,84 @@
+<div class="product-info d-flex">
+  <div class="product-images p-5 bg-light">
+    <ng-image-slider [images]="productImagesObject" #nav></ng-image-slider>
+    <div class="quantity text-center mt-5">
+      <button
+        type="button"
+        class="btn btn-secondary me-3 fw-bold"
+        (click)="decreaseQuantity()"
+      >
+        -
+      </button>
+      <input
+        class="me-3 pb-2 w-25 ps-2 pt-1 fw-bold"
+        disabled
+        value="{{ numberOfQuantitys() }}"
+      />
+      <span class="quntity-suffix text-secondary">Quantity</span>
+      <button
+        type="button"
+        class="btn btn-secondary fw-bold"
+        (click)="increaseQuantity()"
+      >
+        +
+      </button>
+    </div>
+  </div>
+  <div class="product-details p-3">
+    <div class="heading">
+      <h2>
+        {{ productInfo.heading }}
+      </h2>
+    </div>
+    <div class="price mt-3">
+      <h4 class="text-success">
+        <b>&#8377; {{ productInfo.price }}</b
+        ><span class="text-danger">(-50%)</span>
+      </h4>
+      <p>Inclusive of all taxes</p>
+    </div>
+    <div class="additional-info">
+      <table>
+        <tr>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr>
+          <td>Brand</td>
+          <td class="ps-5">{{ productInfo.additional_info.brand }}</td>
+        </tr>
+        <tr>
+          <td>Operating Sysytem</td>
+          <td class="ps-5">
+            {{ productInfo.additional_info.operating_system }}
+          </td>
+        </tr>
+        <tr>
+          <td>RAM Memory Installed Size</td>
+          <td class="ps-5">{{ productInfo.additional_info.size }}</td>
+        </tr>
+        <tr>
+          <td>CPU Speed</td>
+          <td class="ps-5">{{ productInfo.additional_info.cpu_speed }}</td>
+        </tr>
+      </table>
+    </div>
+    <div class="product-buy-buttons mt-5 text-center">
+      <button
+        type="button"
+        class="btn btn-warning fw-bold text-white mt-3 w-75 p-2"
+      >
+        Buy Now
+      </button>
+      <button
+        type="button"
+        class="btn btn-dark fw-bold text-white mt-3 w-75 p-2"
+        (click)="
+          saveItemToCart(numberOfQuantitys(), productInfo, productImagesObject)
+        "
+      >
+        Add To Cart <i class="fas fa-cart-shopping"></i>
+      </button>
+    </div>
+  </div>
+</div>

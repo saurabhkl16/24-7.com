@@ -1,0 +1,22 @@
+.product-info {
+  width: 100%;
+
+  .product-images {
+    width: 40%;
+  }
+
+  .product-details {
+    width: 60%;
+  }
+
+  .product-buy-buttons {
+  }
+
+  .quntity-suffix {
+    position: absolute;
+    left: 300px; /* Adjust this value to align the suffix */
+    top: 389px;
+    transform: translateY(-50%);
+    pointer-events: none; /* Prevent suffix from blocking input clicks */
+}
+}

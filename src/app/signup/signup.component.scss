@@ -1,0 +1,26 @@
+.signup-form {
+    background-color: rgb(30, 32, 142);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    form {
+      margin: auto;
+      width: 50vw; /* Use viewport width to make it responsive */
+      height: 70vw; /* Ensure height matches width for square dimensions */
+      max-width: 400px; /* Optional: Limit the maximum size */
+      max-height: 450px; /* Optional: Limit the maximum size */
+      // border: 3px solid rgb(3, 10, 5);
+      padding: 20px;
+      border-radius: 10px;
+      background-color: rgb(255, 255, 255);
+    }
+  
+    .login-links {
+      button {
+        text-decoration: none;
+      }
+    }
+  }
+  
