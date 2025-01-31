@@ -11,13 +11,17 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent {
   public homePageData: any;
+  public showSpinner: boolean = true;
 
   constructor(private service: ProjectKService, private router: Router) {}
 
   ngOnInit() {
+    this.showSpinner = true;
     this.service.getHomePageData().subscribe((data: any) => {
       this.homePageData = data;
-      console.log(data)
+      if (this.homePageData.length > 0) {
+        this.showSpinner = false;
+      }
     });
   }
 

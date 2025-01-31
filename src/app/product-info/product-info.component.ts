@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class ProductInfoComponent {
   public numberOfQuantitys = signal(1);
   public productInfo: any = {
+    id: '',
     heading: '',
     price: '',
     additional_info: {
@@ -37,13 +38,13 @@ export class ProductInfoComponent {
   ngOnInit() {
     this.productInfo.heading = this.service.selectedProductInfo()[0].title;
     this.productInfo.price = this.service.selectedProductInfo()[0].price;
+    this.productInfo.id = this.service.selectedProductInfo()[0].id;
     this.productInfo['additional_info']['brand'] =
       this.service.selectedProductInfo()[0].brand;
     this.productImagesObject[0]['image'] =
       this.service.selectedProductInfo()[0].image_url;
     this.productImagesObject[0]['thumbImage'] =
       this.service.selectedProductInfo()[0].image_url;
-    console.log(this.productImagesObject);
   }
 
   public increaseQuantity() {
@@ -56,7 +57,18 @@ export class ProductInfoComponent {
 
   public saveItemToCart(quntity: any, product: any, imageUrl: any) {
     let cartProduct = { quantity: quntity, product: product, image: imageUrl };
-    this.service.updateMycart(cartProduct);
-    this.router.navigate(['/cart']);
+    if (this.service.myCart.length === 0) {
+      this.service.updateMycart(cartProduct);
+      this.router.navigate(['/cart']);
+    }
+    this.service.myCart.filter((item: any) => {
+      if (item.product.id != cartProduct.product.id) {
+        this.service.updateMycart(cartProduct);
+        this.router.navigate(['/cart']);
+      } else if (item.product.id === cartProduct.product.id) {
+        item.quantity = item.quantity + cartProduct.quantity;
+        this.router.navigate(['/cart']);
+      }
+    });
   }
 }

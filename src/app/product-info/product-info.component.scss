@@ -11,12 +11,9 @@
 
   .product-buy-buttons {
   }
-
-  .quntity-suffix {
-    position: absolute;
-    left: 300px; /* Adjust this value to align the suffix */
-    top: 389px;
-    transform: translateY(-50%);
-    pointer-events: none; /* Prevent suffix from blocking input clicks */
 }
+
+.button-small {
+  min-height: 40px;
+  min-width: 40px;
 }

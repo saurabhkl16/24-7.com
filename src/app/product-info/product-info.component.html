@@ -4,20 +4,19 @@
     <div class="quantity text-center mt-5">
       <button
         type="button"
-        class="btn btn-secondary me-3 fw-bold"
+        class="btn btn-secondary me-3 fw-bold button-small"
         (click)="decreaseQuantity()"
       >
         -
       </button>
       <input
-        class="me-3 pb-2 w-25 ps-2 pt-1 fw-bold"
+        class="me-3 w-25 fw-bold text-center p-1 button-small"
         disabled
         value="{{ numberOfQuantitys() }}"
       />
-      <span class="quntity-suffix text-secondary">Quantity</span>
       <button
         type="button"
-        class="btn btn-secondary fw-bold"
+        class="btn btn-secondary fw-bold button-small"
         (click)="increaseQuantity()"
       >
         +

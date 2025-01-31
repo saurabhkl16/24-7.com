@@ -11,34 +11,64 @@
       height="40%"
     />
   </div>
-  <div
-    class="mycart-products mt-5 ms-3 me-3 w-100"
-    *ngIf="dataService.myCart.length > 0"
-  >
-    <div
-      class="homepage-card w-50 bg-light p-3 mb-5"
-      *ngFor="let item of dataService.myCart"
-    >
-      <div class="text-center">
-        <img
-          class="homepage-card-image card-img-top"
-          [src]=""
-          height="200px"
-          alt="Card image cap"
-        />
-      </div>
-      <div class="home-page-card-name">
-        <p class="card-text text-center fw-bold">
-          {{ item.product.heading }}
-        </p>
-        <p class="card-text text-center fw-bold">
-          &#8377;{{ item.product.price }}
-        </p>
-        <p class="card-text text-center fw-bold">
-          Quantity: {{ item.quantity }}
-        </p>
+  <div class="mycart-products d-flex" *ngIf="dataService.myCart.length > 0">
+    <div class="mycart-product mt-5 ms-3 me-3 w-50">
+      <div
+        class="homepage-card d-flex w-50 bg-light p-3 mb-5"
+        *ngFor="let item of dataService.myCart; let i = index"
+      >
+        <div class="text-center product-image">
+          <img
+            class="homepage-card-image card-img-top"
+            src="{{ item.image[0].image }}"
+            height="200px"
+            alt="Card image cap"
+          />
+        </div>
+        <div class="home-page-card-name">
+          <p class="card-text text-center fw-bold">
+            {{ item.product.heading }}
+          </p>
+          <p class="card-text text-center fw-bold">
+            &#8377;{{ item.product.price }}
+          </p>
+          <p class="card-text text-center fw-bold">
+            Quantity: {{ item.quantity }}
+          </p>
+          <div class="text-center">
+            <button
+              type="button"
+              class="btn btn-danger fw-bold"
+              (click)="removeitemFromcart(i)"
+            >
+              Remove
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="cart-price w-50"></div>
+    <div class="cart-price w-50 p-3">
+      <h3 class="price-details fw-bold">Price Details</h3>
+      <hr />
+      <div class="d-flex mb-2">
+        <div class="w-25">Price</div>
+        <div class="ps-5">10</div>
+      </div>
+      <div class="d-flex mb-2">
+        <div class="w-25">quntity</div>
+        <div class="ps-5">1</div>
+      </div>
+      <div class="d-flex mb-2">
+        <div class="w-25">Discount</div>
+        <div class="ps-5">10%</div>
+      </div>
+      <div class="d-flex mb-2">
+        <div class="w-25">Platform Charges</div>
+        <div class="ps-5">25</div>
+      </div>
+      <hr />
+      <h5 class="mt-4">Total Amount</h5>
+      <hr />
+    </div>
   </div>
 </div>

@@ -13,7 +13,13 @@ export class CartComponent {
     this.dataService.currentData.subscribe((data) => {
       if (data != null && !this.dataService.myCart.includes(data)) {
         this.dataService.myCart.push(data);
+        console.log('this.dataService.myCart', this.dataService.myCart);
       }
     });
+  }
+
+  public removeitemFromcart(item: any) {
+    console.log('removed', item);
+    this.dataService.myCart.splice(item, 1);
   }
 }

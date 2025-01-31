@@ -12,7 +12,7 @@ export class ProjectKService {
   public currentData = this.dataSource.asObservable();
   public isAuthenticated = signal<boolean>(false);
   private apiUrl = 'http://localhost:9992';
-  public myCart: any[] = [];
+  public myCart: any = [];
 
   constructor(private http: HttpClient, private toastr: ToastrService) {}
 

@@ -4,12 +4,21 @@
     <div class="marquee">
       <!-- Your scrolling content here -->
       10% Discount on Mobiles.... 10% Discount on Bags.... 50% Discount on
-      Laptop.... 10% Discount on Mobiles.... 10% Discount on Bags.... 50% Discount
-      on Laptop - Order Now
+      Laptop.... 10% Discount on Mobiles.... 10% Discount on Bags.... 50%
+      Discount on Laptop - Order Now
     </div>
   </div>
   <div class="website-section mt-5 ms-3 me-3">
-    <div class="homepage-card" *ngFor="let item of homePageData">
+    <div class="spinner d-flex justify-content-center align-items-center">
+      <div
+        class="spinner-border text-primary"
+        role="status"
+        *ngIf="showSpinner === false"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <!-- <div class="homepage-card" *ngFor="let item of homePageData">
       <div class="text-center">
         <img
           class="homepage-card-image card-img-top"
@@ -22,6 +31,6 @@
       <div class="home-page-card-name">
         <p class="card-text text-center fw-bold">{{ item.title }}</p>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>

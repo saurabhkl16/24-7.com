@@ -1,19 +1,35 @@
 /* styles.css */
 .animated-text-container {
-    text-align: center;
-    margin-top: 50px;
+  text-align: center;
+  margin-top: 50px;
 }
 
 .animated-text {
-    color: #333;
-    animation: fadeInOut 3s infinite;
+  color: #333;
+  animation: fadeInOut 3s infinite;
 }
 
 @keyframes fadeInOut {
-    0%, 100% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.price-details {
+  display: block;
+  text-transform: uppercase;
+  padding: 13px 24px;
+  font-weight: var(--font-medium);
+  color: var(--color-grey-grade4);
+  min-height: 47px;
+  border-radius: 2px 2px 0 0;
+}
+
+.mycart-product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
