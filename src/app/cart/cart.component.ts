@@ -19,7 +19,6 @@ export class CartComponent {
   }
 
   public removeitemFromcart(item: any) {
-    console.log('removed', item);
     this.dataService.myCart.splice(item, 1);
   }
 }

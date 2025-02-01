@@ -9,28 +9,29 @@
     </div>
   </div>
   <div class="website-section mt-5 ms-3 me-3">
-    <div class="spinner d-flex justify-content-center align-items-center">
-      <div
-        class="spinner-border text-primary"
-        role="status"
-        *ngIf="showSpinner === false"
-      >
+    <div
+      class="spinner d-flex justify-content-center align-items-center"
+      *ngIf="showSpinner === true"
+    >
+      <div class="spinner-border text-primary" role="status">
         <span class="sr-only">Loading...</span>
       </div>
     </div>
-    <!-- <div class="homepage-card" *ngFor="let item of homePageData">
-      <div class="text-center">
-        <img
-          class="homepage-card-image card-img-top"
-          [src]="item.image_url"
-          height="200px"
-          alt="Card image cap"
-          (click)="openFullProduct(item)"
-        />
+    <ng-container *ngIf="showSpinner === false">
+      <div class="homepage-card" *ngFor="let item of homePageData">
+        <div class="text-center">
+          <img
+            class="homepage-card-image card-img-top"
+            [src]="item.image_url"
+            height="200px"
+            alt="Card image cap"
+            (click)="openFullProduct(item)"
+          />
+        </div>
+        <div class="home-page-card-name">
+          <p class="card-text text-center fw-bold">{{ item.title }}</p>
+        </div>
       </div>
-      <div class="home-page-card-name">
-        <p class="card-text text-center fw-bold">{{ item.title }}</p>
-      </div>
-    </div> -->
+    </ng-container>
   </div>
 </div>
