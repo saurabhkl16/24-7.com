@@ -12,16 +12,16 @@
     />
   </div>
   <div class="mycart-products d-flex" *ngIf="dataService.myCart.length > 0">
-    <div class="mycart-product mt-5 ms-3 me-3 w-50">
+    <div class="mycart-product w-50 mt-5 ms-3 me-3">
       <div
-        class="homepage-card d-flex w-50 bg-light p-3 mb-5"
+        class="homepage-card d-flex w-100 bg-light p-3 mb-5"
         *ngFor="let item of dataService.myCart; let i = index"
       >
         <div class="text-center product-image">
           <img
             class="homepage-card-image card-img-top"
             src="{{ item.image[0].image }}"
-            height="200px"
+            max-height="200px"
             alt="Card image cap"
           />
         </div>
